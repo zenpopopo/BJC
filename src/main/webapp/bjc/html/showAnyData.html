@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>show any data</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../js/vendor/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../js/vendor/jQuery.stringify.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/controllers/ShowAnyDataController.js"></script>
+        <script type="text/javascript" src="../js/logics/ToServerLogic.js"></script>
+    </head>
+    <body>
+        データ検索
+        <form id="searchData">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td><input type='radio' name='dataSelect' value='pgRank' /></td>
+                        <td>PGランク検索</td>
+                        <td><input type="text" id="pgRankCd"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type='radio' name='dataSelect' value='mgRank' /></td>
+                        <td>MGランク検索</td>
+                        <td><input type="text" id="mgRankCd"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="送信" id="search" data-action="/BJC/rest/sample/searchData"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <div id="resultData"></div>
+            
+        </form>
+    </body>
+</html>
