@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ticket Create</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../js/vendor/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../js/controllers/CreateTicketController.js"></script>
+        <script type="text/javascript" src="../js/logics/ToServerLogic.js"></script>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>題名</td>
+                        <td><input id="subject" /></td>
+                    </tr>
+                    <tr>
+                        <td>説明</td>
+                        <td><input id="description" /></td>
+                    </tr>
+                    <tr>
+                        <td>担当者</td>
+                        <td><input id="auther" /></td>
+                    </tr>
+                    <tr>
+                        <td>期日</td>
+                        <td><input id="dueDate" /></td>
+                    </tr> 
+                </tbody>
+            </table>
+            <button id="createTicket">チケット作成</button>
+        </form>
+    </body>
+</html>

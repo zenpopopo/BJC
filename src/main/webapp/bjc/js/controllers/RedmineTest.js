@@ -17,23 +17,15 @@ BjcScripts.RedmineTest = {
         this.$search.on('click', function() {
             
             var sendUrl = $('#search').attr('data-action');
-            var sendType = 'POST';
+            var sendType = 'GET';
             var sendConfig = {};
             sendConfig['sendUrl'] = sendUrl;
             sendConfig['sendType'] = sendType;
             
-            var sendKey = 'ticketNo';
-            var sendVal = $('#ticketNo').val();
-            var sendDataObject = {};
-            sendDataObject['header'] = {
-                "system" : "bjc",
-                "account" : "test",
-                "requestMode" : "test"
-            };
-            sendDataObject['body'] = {
-                "functionName" : "redmineTest",
-                "functionKey" : sendKey,
-                "functionValue" : sendVal
+            var sendKey = 'id';
+            var sendVal = $('#id').val();
+            var sendDataObject = {
+                "id" : sendVal
             };
             var sendData = JSON.stringify(sendDataObject);
             
@@ -47,9 +39,9 @@ BjcScripts.RedmineTest = {
                         = $.parseJSON(JSON.stringify(result));
                 var output = "☆☆検索結果☆☆";
                 $.each(resultJson, function(i, item) {
-                    output =  output + "<br />" + i + " : ";
-                    $.each(item, function(j, item2){
-                        output =  output + "<br />" + i + " : " + item["id"];
+                    output =  output + "<br />" + i + " : " + item['subject'];
+                    $.each(item, function(j, item2) {
+                        output = output + "<br />" + "&ensp;" + j + " : " + item2;
                     });
                 });
                 

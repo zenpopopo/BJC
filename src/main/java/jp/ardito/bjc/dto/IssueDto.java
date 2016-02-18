@@ -5,18 +5,9 @@
  */
 package jp.ardito.bjc.dto;
 
-import lombok.Getter;
-
 /**
  *
  * @author zempo
  */
-public class RequestJson {
-
-    @Getter
-    public RequestJsonHeader header;
-
-    @Getter
-    public RequestJsonBody body;
-
+public class IssueDto {
 }

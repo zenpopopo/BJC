@@ -50,7 +50,7 @@ public class JsonUtils {
      * @param list
      * @return
      */
-    public static String creatJson(List<?> list) {
+    public static String creatJsonFromList(List<?> list) {
 
         ObjectMapper om = new ObjectMapper();
 
@@ -59,7 +59,7 @@ public class JsonUtils {
         }
 
         try {
-            return om.writeValueAsString(list.get(0));
+            return om.writeValueAsString(list);
         } catch(Exception e) {
             System.out.println("creatJsonError");
         }

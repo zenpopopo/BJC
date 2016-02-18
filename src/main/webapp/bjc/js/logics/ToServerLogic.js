@@ -14,7 +14,7 @@ BjcScripts.ToServer = {
                 type:sendConfig['sendType'],
                 data:sendData,
                 timeout: 30000,
-                contentType:'application/json',
+                contentType:'application/json;charset=ISO-8859-1',
                 datatype: 'Json',
                 success: function(response) {
                     console.log("return");

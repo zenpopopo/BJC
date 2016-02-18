@@ -15,17 +15,14 @@ and open the template in the editor.
         <script type="text/javascript" src="../js/logics/ToServerLogic.js"></script>
     </head>
     <body>
-        データ検索
+        Redmineチケット取得
         <form id="searchData">
 
             <table>
                 <tbody>
                     <tr>
-                        <td>チケット番号</td>
-                        <td><input type="text" id="ticketNo"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="button" value="送信" id="search" data-action="/BJC/rest/redmineTest/getIssues" /></td>
+                        <td><input type="text" id="id" /></td>
+                        <td><input type="button" value="チケット取得" id="search" data-action="/BJC/api/task/issue" /></td>
                     </tr>
                 </tbody>
             </table>
